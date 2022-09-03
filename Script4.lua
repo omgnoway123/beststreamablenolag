@@ -1,4 +1,4 @@
-local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/howyougetcracked/speed/main/silent"))()
+local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/omgnoway123/fr/main/asd"))()
 Aiming.TeamCheck(false)
 
 local Workspace = game:GetService("Workspace")
@@ -12,7 +12,7 @@ local CurrentCamera = Workspace.CurrentCamera
 
 local DaHoodSettings = {
     SilentAim = true,
-    Prediction = 0.169,
+    Prediction = 0.170,
     
 }
 getgenv().DaHoodSettings = DaHoodSettings
