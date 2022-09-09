@@ -12,8 +12,7 @@ local CurrentCamera = Workspace.CurrentCamera
 
 local DaHoodSettings = {
     SilentAim = true,
-    Prediction = 0.170,
-    
+    Prediction = 0.168,
 }
 getgenv().DaHoodSettings = DaHoodSettings
 
@@ -55,5 +54,20 @@ RunService:BindToRenderStep("AimLock", 0, function()
         local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
 
         CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
+    end
+    end)
+
+    local cframeSpheedhotkeyXd1 = "=" -- toggle key
+    local mouse = game.Players.LocalPlayer:GetMouse()
+    
+    
+    
+    mouse.KeyDown:Connect(function(value)
+    if value == cframeSpheedhotkeyXd1 then
+    if DaHoodSettings.SilentAim == true then
+        DaHoodSettings.SilentAim = false
+    else
+        DaHoodSettings.SilentAim = true
+    end
     end
     end)
